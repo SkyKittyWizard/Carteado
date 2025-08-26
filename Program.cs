@@ -1,4 +1,5 @@
-﻿using Carteado.Models;
+﻿using System;
+using Carteado.Core;
 
 namespace Carteado;
 
@@ -6,11 +7,10 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var baralho = new Baralho();
+        JogoVaza vaza = new();
+        vaza.Jogar();
 
-        baralho.Display();
-        baralho.Embaralhar();
-        System.Console.WriteLine();
-        baralho.Display();
+        Console.WriteLine("\nPressione qualquer tecla para sair...");
+        Console.ReadKey();
     }
 }
